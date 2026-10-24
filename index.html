@@ -1718,9 +1718,9 @@
         <form onsubmit="handleTeacherLoginSubmit(event)" class="space-y-3 pt-1 text-xs font-mono">
           <div>
             <label class="text-slate-700 font-semibold block mb-1">Nama Pengajar / Guru *</label>
-            <input type="text" id="teacher-login-name" required placeholder="Andrean Putra Fermana"
+            <input type="text" id="teacher-login-name" required placeholder="andrean putra fermana"
               class="w-full bg-slate-50 border border-slate-200 focus:border-purple-500 rounded-xl p-2.5 text-xs text-slate-800 outline-none">
-            <span class="text-[10px] text-slate-400 mt-1 block">Petunjuk: Masukkan nama pengajar resmi FILM.</span>
+            <span class="text-[10px] text-slate-400 mt-1 block">Petunjuk: Masukkan nama pengajar resmi GURU DKV.</span>
           </div>
           <div>
             <label class="text-slate-700 font-semibold block mb-1">Kata Sandi Guru *</label>
@@ -2065,7 +2065,7 @@ const firebaseConfig = {
       } catch (e) {}
     }
 
-    const TEACHER_OFFICIAL_NAME = 'Andrean Putra Fermana';
+    const TEACHER_OFFICIAL_NAME = 'andrean putra fermana';
     const TEACHER_OFFICIAL_PASS = '1234';
 
     let savedUid = localStorage.getItem('fobi_uid');
@@ -2181,7 +2181,7 @@ const firebaseConfig = {
       if (targetTabId === 'tab-guru') {
         if (!isTeacherLoggedIn()) {
           openLoginModal('teacher');
-          alertBox('🔒 Akses Khusus: Silakan login sebagai Guru (Andrean Putra Fermana).');
+          alertBox('🔒 Akses Khusus: Silakan login sebagai Guru (andrean putra fermana).');
           return;
         }
       } else if (targetTabId !== 'tab-beranda' && targetTabId !== 'tab-tutorial' && !isStudentLoggedIn()) {
@@ -2335,7 +2335,7 @@ const firebaseConfig = {
       
       if (inputName === TEACHER_OFFICIAL_NAME && inputPass === TEACHER_OFFICIAL_PASS) {
         const teacherProfile = {
-          name: 'Andrean Putra Fermana',
+          name: 'andrean putra fermana',
           role: 'Guru Pengajar DKV',
           nip: 'SMKN 1 Surabaya'
         };
@@ -2354,13 +2354,13 @@ const firebaseConfig = {
         renderStudentIdentityUI();
         switchMainTab('tab-guru');
         renderTeacherTable();
-        alertBox(`Akses Diterima! Selamat datang, Bapak Andrean Putra Fermana.`);
+        alertBox(`Akses Diterima! Selamat datang, Bapak andrean putra fermana.`);
       } else {
         playDialClick();
         if (errAlert && errText) {
           errAlert.classList.remove('hidden');
           if (inputName !== TEACHER_OFFICIAL_NAME) {
-            errText.innerText = `Nama Pengajar "${inputName}" tidak terdaftar! Nama harus: Andrean Putra Fermana`;
+            errText.innerText = `Nama Pengajar "${inputName}" tidak terdaftar! Nama harus: andrean putra fermana`;
           } else {
             errText.innerText = `Kata sandi guru salah! Silakan masukkan sandi yang tepat (1234).`;
           }
@@ -2406,11 +2406,11 @@ const firebaseConfig = {
       const iconRefleksi = document.getElementById('nav-icon-refleksi');
       
       if (role === 'teacher' && teacherProfile) {
-        if (dispName) dispName.innerText = 'Andrean Putra Fermana';
+        if (dispName) dispName.innerText = 'andrean putra fermana';
         if (dispClass) dispClass.innerText = '';
         if (btnGuruLabel) btnGuruLabel.innerText = 'Mode Guru (Aktif)';
         if (userIcon) userIcon.className = 'fa-solid fa-chalkboard-user text-[10px]';
-        if (heroName) heroName.innerText = 'Bpk. Andrean Putra Fermana (Guru)';
+        if (heroName) heroName.innerText = 'Bpk. andrean putra fermana (Guru)';
         if (gateBanner) gateBanner.classList.add('hidden');
         if (tabGuruBtn) tabGuruBtn.classList.remove('hidden');
         
